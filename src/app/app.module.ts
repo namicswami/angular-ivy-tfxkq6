@@ -13,6 +13,7 @@ import {AppTopBarComponent} from './topbar.component';
 //PrimeNG Components for the demo page
 import {AccordionModule} from 'primeng/accordion';
 import {BadgeModule} from 'primeng/badge';
+import { ButtonModule } from 'primeng/button';
 import {BreadcrumbModule} from 'primeng/breadcrumb';
 import {DropdownModule} from 'primeng/dropdown';
 import {FileUploadModule} from 'primeng/fileupload';
@@ -24,12 +25,15 @@ import {TableModule} from 'primeng/table';
 import {ToolbarModule} from 'primeng/toolbar';
 import {TreeModule} from 'primeng/tree';
 import {TreeTableModule} from 'primeng/treetable';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 @NgModule({
-  imports:      [ BrowserModule, 
+  imports:      [ BrowserModule,
+                  ButtonModule, 
                   FormsModule, 
                   AppRoutingModule,
+                  InputTextModule,
                   BrowserAnimationsModule,
                   HttpClientModule,
                   AccordionModule,

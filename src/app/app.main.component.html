@@ -1,3 +1,31 @@
-<p>
-app-main works!
-</p>
+<div class="layout-wrapper" (click)="onLayoutClick()"
+     [ngClass]="{'layout-static': isStatic(),
+                'layout-overlay': isOverlay(),
+                'layout-overlay-active': overlayMenuActive,
+                'layout-horizontal': isHorizontal(),
+                'layout-slim': isSlim(),
+                'layout-static-inactive': staticMenuDesktopInactive,
+                'layout-mobile-active': staticMenuMobileActive,
+                'layout-menu-dark':app.darkMenu,
+                'layout-menu-light':!app.darkMenu, 'p-input-filled': app.inputStyle === 'filled', 'p-ripple-disabled': !app.ripple}">
+
+    <app-topbar></app-topbar>
+
+    <div class="layout-menu-container" >
+    <div class="layout-menu-logo">
+        <a href="#">
+            <img id="layout-menu-logo" src="assets/layout/images/logo-white.png" library="babylon-layout" />
+        </a>
+    </div>
+    <div class="layout-menu-wrapper">
+        <div class="menu-scroll-content">
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="layout-content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
