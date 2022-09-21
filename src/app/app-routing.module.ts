@@ -9,10 +9,9 @@ import { AppCrudComponent } from './pages/app.crud.component';
           {
               path: '', component: AppMainComponent,
               children: [
-                  {path: 'pages/crud', component: AppCrudComponent},,
+                  {path: 'pages/crud', component: AppCrudComponent},
               ]
-          },
-          {path: '**', redirectTo: '/notfound'},
+          }
       ], {scrollPositionRestoration: 'enabled'})
   ],
   exports: [RouterModule]
